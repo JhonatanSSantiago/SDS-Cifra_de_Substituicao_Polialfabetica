@@ -15,10 +15,10 @@ function cifrarMsg(){
     var msg_chave = "";
     var msg_cifrada = ""; 
     console.log("msg: "+msg+" |chave: "+chave+" |tam da chave: "+tam_chave);
-    if(tam_chave<3){
+    if(tam_chave<2){
         alert("digita uma chave com pelo menos 3 caracteres");
     }else{       
-        for(var j = 0; j<=msg.length; j++){ 
+        for(var j = 0; j<=msg.length+tam_chave; j++){ 
             msg_chave = msg.slice(0,tam_chave);
             msg=msg.slice(tam_chave);
             console.log("msg-chave: "+msg_chave+" |Msg resto: "+msg);
@@ -66,10 +66,10 @@ function descifrarMsg(){
     var msg_chave = "";
     var msg_cifrada = "";   
     console.log("msg: "+msg+" |chave: "+chave+" |tam da chave: "+tam_chave);
-    if(tam_chave<3){
+    if(tam_chave<2){
         alert("digita uma chave com pelo menos 3 caracteres");
     }else{     
-        for(var j = 0; j<=msg.length; j++){ 
+        for(var j = 0; j<=msg.length+tam_chave; j++){ 
             
             msg_chave = msg.slice(0,tam_chave);
             msg=msg.slice(tam_chave);
@@ -99,7 +99,7 @@ function descifrarMsg(){
         
         } //for j
         resposta(msg_cifrada);
-    }
+      }
 }
 
 function resposta(msg_cifrada){
