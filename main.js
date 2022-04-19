@@ -9,14 +9,13 @@ document.getElementById("btn_cifrar").addEventListener("click",
 
 function cifrarMsg(){
     var msg = document.getElementById("msg").value.toUpperCase();
-    var chave = document.getElementById("chave").value.toUpperCase();
-    
+    var chave = document.getElementById("chave").value.toUpperCase();    
     var tam_chave = chave.length;
     var msg_chave = "";
     var msg_cifrada = ""; 
     console.log("msg: "+msg+" |chave: "+chave+" |tam da chave: "+tam_chave);
     if(tam_chave<2){
-        alert("digita uma chave com pelo menos 3 caracteres");
+        alert("digita uma chave com pelo menos 2 caracteres");
     }else{       
         for(var j = 0; j<=msg.length+tam_chave; j++){ 
             msg_chave = msg.slice(0,tam_chave);
@@ -67,7 +66,7 @@ function descifrarMsg(){
     var msg_cifrada = "";   
     console.log("msg: "+msg+" |chave: "+chave+" |tam da chave: "+tam_chave);
     if(tam_chave<2){
-        alert("digita uma chave com pelo menos 3 caracteres");
+        alert("digita uma chave com pelo menos 2 caracteres");
     }else{     
         for(var j = 0; j<=msg.length+tam_chave; j++){ 
             
